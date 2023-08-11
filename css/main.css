@@ -111,7 +111,7 @@ html,body {
   width: 28px;
   border-radius: 32px;
   border: none;
-  background: #FFFFFF26 url("/img/arrow.svg") no-repeat;
+  background: #FFFFFF26 url("/public/img/arrow.svg") no-repeat;
   background-position-y: 50%;
   background-position-x: 50%;
 }
@@ -163,7 +163,7 @@ html,body {
 .calendar-button {
   width: 54px;
   height: 38px;
-  background: white url("/img/calendar.svg");
+  background: white url("/public/img/calendar.svg");
   border: none;
 }
 
@@ -219,7 +219,7 @@ main {
 
 
 html,body {
-  background: url("/img/bg.png") center;
+  background: url("/public/img/bg.png") center;
 }
 
 .about-us {
@@ -791,7 +791,7 @@ html, body {
     background:
       linear-gradient(0deg, rgba(214, 218, 227, 0.05), rgba(214, 218, 227, 0.05)),
       linear-gradient(90deg, rgba(255, 255, 255, 0.15) -0.13%, rgba(255, 255, 255, 0) 79.35%),
-      url("/img/services/button.png") no-repeat;
+      url("/public/img/services/button.png") no-repeat;
     cursor: pointer;
     background-position: 95% 50%;
   }
@@ -1052,7 +1052,7 @@ html, body {
   height: 100%;
   max-width: 100%;
   background-size: 700% 130%;
-  background: url("/img/network_bg.png") no-repeat center;
+  background: url("/public/img/network_bg.png") no-repeat center;
   background-position-x: 46%;
   background-position-y: 112px;
 }
