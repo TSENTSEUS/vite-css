@@ -762,6 +762,10 @@ html, body {
 
 @media screen and (min-width: 1440px)
 {
+  .mob-nav {
+    margin: 0 0;
+  }
+
   .introduction {
     margin: 76px 0 0 0;
   }
