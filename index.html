@@ -13,8 +13,16 @@
   <meta property="og:image" content="">
 
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/swiper.css">
 
   <meta name="theme-color" content="#fafafa">
+
+  <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+  />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -453,49 +461,61 @@
   <section class="stats">
       <div class="stats-card">
         <img src="/public/img/stats/house.png"/>
-        <div class="stats-title">
-          650+
-        </div>
-        <div class="stats-desc">
-          Companies In Our Network
-        </div>
-      </div>
-      <div class="stats-card">
-        <img src="/public/img/stats/phone.png"/>
-        <div class="stats-title">
-          500+
-        </div>
-        <div class="stats-desc">
-          Alpha Call Channels
+        <div>
+          <div class="stats-title">
+            650+
+          </div>
+          <div class="stats-desc">
+            Companies In Our Network
+          </div>
         </div>
       </div>
       <div class="stats-card">
-        <img src="/public/img/stats/link.png"/>
-        <div class="stats-title">
-          150+
+        <img src="/public/img/stats/phone.png" alt="phone-stats"/>
+        <div>
+          <div class="stats-title">
+            500+
+          </div>
+          <div class="stats-desc">
+            Alpha Call Channels
+          </div>
         </div>
-        <div class="stats-desc">
-          Influencers connections
+
+      </div>
+      <div class="stats-card">
+        <img src="/public/img/stats/link.png" alt="link-stats"/>
+        <div>
+          <div class="stats-title">
+            150+
+          </div>
+          <div class="stats-desc">
+            Influencers connections
+          </div>
         </div>
       </div>
       <div class="stats-card">
-        <img src="/public/img/stats/money.png"/>
+        <img src="/public/img/stats/money.png" alt="stats-money"/>
+        <div>
         <div class="stats-title">
           650+
         </div>
         <div class="stats-desc">
           In blockchain sales
         </div>
+        </div>
       </div>
   </section>
   <section class="team">
-    <div class="divider"></div>
-    <div class="team-column">
-      <div class="gradient-container">TEAM</div>
-      <div>
-      <div class="team-title">
-        Dedicated Growth Team
+    <div class="team-container">
+      <div class="divider"></div>
+
+      <div class="team-column">
+        <div class="gradient-container">TEAM</div>
+        <div>
+        <div class="team-title">
+          Dedicated Growth Team
       </div>
+
       <div class="team-desc">
         Bluship only partners with a select number of clients, enabling us to prioritize
         your business & provide the attention it deserves.
@@ -505,19 +525,31 @@
       </div>
       </div>
     </div>
+    </div>
 
-      <div class="team-carousel">
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><img src="/img/TeamCard.png"/></div>
+          <div class="swiper-slide"><img src="/img/TeamCard.png"/></div>
+          <div class="swiper-slide"><img src="/img/TeamCard.png"/></div>
+          <div class="swiper-slide"><img src="/img/TeamCard.png"/></div>
+          <div class="swiper-slide"><img src="/img/TeamCard.png"/></div>
+          ...
+        </div>
+      </div>
 
-      </div>
-      <div class="carousel-nav">
-        <button class="button-left">
-          <img src="/public/img/carousel_arrow.svg" alt="left-arrow"/>
-        </button>
-        <button class="button-right">
-          <img src="/public/img/carousel_arrow.svg" alt="right-arrow"/>
-        </button>
-      </div>
+    <!-- Slider main container -->
   </section>
+  <div class="carousel-nav">
+    <button class="button-left">
+      <img src="/public/img/carousel_arrow.svg" alt="left-arrow"/>
+    </button>
+    <button class="button-right">
+      <img src="/public/img/carousel_arrow.svg" alt="right-arrow"/>
+    </button>
+  </div>
   <section class="bottom-tagline-container">
     <div class="tagline-column">
       <div class="bottom-tagline">
@@ -536,34 +568,62 @@
 </main>
 <footer>
   <section class="footer-wrapper">
-  <div class="logo-row">
-    <img class="footer-logo" src="/public/img/logo.svg" alt="footer-logo"/>
-    <div class="social-row">
-      <div class="social-item">
-        <img src="/img/social/linkedin.png"/>
-      </div>
-      <div class="social-item">
-        <img src="/img/social/twitter.png"/>
-      </div>
-      <div class="social-item">
-        <img src="/img/social/email.png"/>
+
+  <div class="service-footer-column">
+
+    <div class="left-column">
+          <img class="footer-pc-logo" style="width: 185px" src="/public/img/logo.svg" alt="footer-logo"/>
+          <div class="building-tagline">
+            Building and growing communities is the foundation of Bluship.
+            Each piece of our content has a purpose and is designed to convert curiosity into enthusiasm.
+            <br class="footer-br"/>
+            <br class="footer-br"/>
+            Web3 is a curious space because there is no formal education for this industry.
+            There is no course for curiosity, and that is the philosophy that we want to push forward.
+            <br class="footer-br"/>
+            <br class="footer-br"/>
+            You have the opportunity to partner with a highly growth-obsessed team that prioritizes creativity and innovation.
+            Your curiosity led you here. How far will it take you?
+          </div>
+      <div class="policy-row">
+        <div>
+          PRIVACY POLICY
+        </div>
+        <div>
+          TERMS AND CONDITIONS
+        </div>
       </div>
     </div>
-  </div>
-  <div class="service-footer-column">
+    <div class="right-column">
+      <div class="logo-row">
+        <img class="footer-logo" src="/public/img/logo.svg" alt="footer-logo"/>
+        <div class="social-row">
+          <div class="social-item">
+            <img src="/img/social/linkedin.png"/>
+          </div>
+          <div class="social-item">
+            <img src="/img/social/twitter.png"/>
+          </div>
+          <div class="social-item">
+            <img src="/img/social/email.png"/>
+          </div>
+        </div>
+      </div>
+      <div>
     <div class="service-column-title">
       Services
     </div>
     <div class="footer-gradient"></div>
     <div class="services-footer-list">
       <div class="column-footer-item">
-        <div class="services-footer-item">
-          Graphic Design & Digital Illustration
+        <div class="services-footer-item design">
+          Graphic Design &
+          Digital Illustration
         </div>
         <div class="services-footer-item">
           Influencer Campaigns
         </div>
-        <div class="services-footer-item">
+        <div class="services-footer-item collaborations">
           Collaborations & Acquisition Marketing
         </div>
         <div class="services-footer-item">
@@ -586,7 +646,7 @@
           Influencer Campaigns
         </div>
 
-        <div class="services-footer-item">
+        <div class="services-footer-item twitter">
           Twitter Space Packages & Hosting
         </div>
 
@@ -594,7 +654,7 @@
           Development
         </div>
 
-        <div class="services-footer-item">
+        <div class="services-footer-item design">
           Graphic Design & Digital Illustration
         </div>
         <div class="services-footer-item">
@@ -602,60 +662,79 @@
         </div>
       </div>
     </div>
-    <div class="building-tagline">
-      Building and growing communities is the foundation of Bluship.
-      Each piece of our content has a purpose and is designed to convert curiosity into enthusiasm.
-      <br class="footer-br"/>
-      <br class="footer-br"/>
-      Web3 is a curious space because there is no formal education for this industry.
-      There is no course for curiosity, and that is the philosophy that we want to push forward.
-      <br class="footer-br"/>
-      <br class="footer-br"/>
-      You have the opportunity to partner with a highly growth-obsessed team that prioritizes creativity and innovation.
-      Your curiosity led you here. How far will it take you?
-    </div>
-    <div class="policy-row">
-      <div>
-        PRIVACY POLICY
+        </div>
+      <div class="logo-row privacy">
+        <div class="policy-row">
+          <div>
+            PRIVACY POLICY
+          </div>
+          <div>
+            TERMS AND CONDITIONS
+          </div>
+        </div>
+        <div class="social-row">
+          <div class="social-item">
+            <img src="/img/social/linkedin.png"/>
+          </div>
+          <div class="social-item">
+            <img src="/img/social/twitter.png"/>
+          </div>
+          <div class="social-item">
+            <img src="/img/social/email.png"/>
+          </div>
+        </div>
       </div>
-      <div>
-        TERMS AND CONDITIONS
-      </div>
-    </div>
+  </div>
   </div>
   </section>
 </footer>
 
 </body>
-  <script>
-      const services = document.getElementsByClassName('service-card');
-      const droneText = document.getElementById('drone-title')
-      const droneDesc = document.getElementById('drone-desc')
-      const serviceColumn = document.getElementById('service-column')
-      const hoverHandler = () => {
-        for(const service of services)
-        {
-          if(service.matches(":hover"))
-          {
-            droneText.innerText = service.innerText
-            droneDesc.innerText = textObject[service.innerText]
-          }
+  <script src="droneText.js"></script>
+  <script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs'
+
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      initialSlide: 0,
+      // Navigation arrows
+      navigation: {
+        nextEl: '.button-right',
+        prevEl: '.button-left',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+
+      breakpoints: {
+        320: {
+          slidesPerView: 1.49,
+        },
+        400: {
+          slidesPerView: 1.86,
+        },
+        480: {
+          slidesPerView: 2.2,
+        },
+        580: {
+          slidesPerView: 2.6,
+        },
+        758: {
+          slidesPerView: 3.25,
+        },
+        850: {
+          slidesPerView: 3.5,
+        },
+        1080: {
+          slidesPerView: 4.2,
+        },
+        1440: {
+          slidesPerView: 5.35,
         }
       }
-      const textObject = {
-        "SOCIAL MEDIA MARKETING": "Text1",
-        "INFLUENCER CAMPAIGNS":"Text2",
-        "COLLABORATIONS & ACQUISITION MARKETING": "Text3",
-        "ALPHA CALLS": "Text4",
-        "DISCORD GROWTH": "Text5",
-        "COPYWRITING": "Text6",
-        "DEVELOPMENT": "Text7",
-        "B2B CAMPAIGNS": "Text8",
-        "GRAPHIC DESIGN & DIGITAL ILLUSTRATION": "Text9",
-        "TWITTER SPACE PACKAGES & HOSTING": "Text10",
-        "STRATEGY & ADVISORY": "Text11",
-        "PPC MARKETING":"Text12"
-      }
-      serviceColumn.addEventListener('mouseover', hoverHandler)
+    });
   </script>
 </html>
