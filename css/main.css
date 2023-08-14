@@ -259,7 +259,7 @@ html,body {
 @media screen and (min-width: 240px) {
 
   .team {
-    padding-bottom: 259px;
+    padding-bottom: 280px;
   }
 
   .tag-container::after {
@@ -1012,7 +1012,7 @@ html,body {
 }
 @media screen and (min-width: 1080px) {
   .team {
-    padding-bottom: 314px;
+    padding-bottom: 280px;
   }
 
   .tag-container::after {
