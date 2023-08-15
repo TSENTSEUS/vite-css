@@ -46,7 +46,8 @@
 
 @media screen and (min-width: 1440px) {
     .swiper-slide img {
-        width: 240px;
+        width: 252px;
+        height: 300px;
     }
     .swiper-container {
         max-width: 1440px;
