@@ -37,7 +37,7 @@ html,body {
   height: 100%;
   overflow: hidden;
   max-height: 0;
-  transition: max-height .5s ease-out;
+  transition: max-height .05s ease-out;
   background: linear-gradient(180deg, #1E071F 0%, #0B091C 100%);
 
   font-family: ClashGrotesk, serif;
@@ -108,6 +108,7 @@ html,body {
 
 .checkbox:checked ~ .dropdown-nav{
   flex-direction: column;
+  height: 100vh;
   max-height: 400px;
 }
 
@@ -134,6 +135,7 @@ html,body {
 
 .navigation-header {
   display: flex;
+  position: relative;
   align-items: center;
   column-gap: 6px;
   color: white;
@@ -280,9 +282,50 @@ html,body {
   margin-right: 12px;
 }
 
-
+.policy-row a {
+  position: relative;
+}
+.policy-row a:first-of-type:after {
+  content: " ";
+  position: absolute;
+  width: 1px;
+  background: #4C445B;
+}
 
 @media screen and (min-width: 240px) {
+  .services::after {
+    top: 950px;
+    left: -180px;
+  }
+
+  .carousel-nav {
+    padding-top: 24px;
+  }
+
+  .footer-gradient {
+    margin: 14px 0;
+  }
+
+  .services .block-info {
+    padding-bottom: 36px;
+  }
+
+  .policy-row a:first-of-type:after {
+    height: 16px;
+    left: 110px;
+  }
+
+  .policy-row {
+    position: relative;
+    justify-content: center;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .tagline-main {
+    padding: 0 18px;
+  }
+
   .footer-pc-logo {
     width: 185px;
   }
@@ -379,7 +422,8 @@ html,body {
   }
 
   .footer-wrapper {
-    padding: 34px 18px;
+    padding: 34px 0;
+    width: calc(100% - 36px);
   }
 
   .building-tagline {
@@ -473,6 +517,7 @@ html,body {
   .bottom-tagline-container {
     padding-top: 82px;
     padding-bottom: 354px;
+    width: 100%;
     align-items: center;
     justify-content: center;
   }
@@ -669,6 +714,27 @@ html,body {
 }
 
 @media screen and (min-width: 480px) {
+  .carousel-nav {
+    padding-top: 32px;
+  }
+
+  .footer-gradient {
+    margin: 22px 0;
+  }
+
+  .services .block-info {
+    padding-bottom: 42px;
+  }
+
+  .policy-row a:first-of-type:after {
+    left: 124px;
+    height: 20px;
+  }
+
+  .policy-row {
+    font-size: 14px;
+    line-height: 22px;
+  }
 
   .stay-curious {
     height: 103px;
@@ -724,9 +790,9 @@ html,body {
     max-width: 170px;
   }
 
-  footer {
-    margin-top: 60px;
-  }
+  /*footer {*/
+  /*  margin-top: 60px;*/
+  /*}*/
 
   .tagline-column {
     align-items: start;
@@ -747,7 +813,7 @@ html,body {
   .team-title {
     font-size: 42px;
     line-height: 54px;
-    padding-top: 16px;
+    /*padding-top: 16px;*/
     max-width: 320px;
   }
 
@@ -899,7 +965,7 @@ html,body {
   }
 
   .network .block-info {
-    max-width: 360px;
+    max-width: 380px;
   }
 
   .network .block-info {
@@ -919,6 +985,31 @@ html,body {
 
 @media screen and (min-width: 758px)
 {
+  .services::after {
+    top: 750px;
+    left: -180px;
+  }
+
+  .navigation-header:after {
+    position: absolute;
+    content: " ";
+    width: 668px;
+    height: 697px;
+    border-radius: 697px;
+    opacity: 0.15;
+    left: 25%;
+    background: linear-gradient(270deg, #16BAFF 0%, #16BAFF 100%);
+    filter: blur(222px);
+  }
+
+  .policy-row {
+    justify-content: start;
+  }
+
+  .tagline-main {
+    justify-content: end;
+  }
+
   .brands .network-row-wrapper {
     width: 1240px;
   }
@@ -990,7 +1081,8 @@ html,body {
   }
 
   .footer-wrapper {
-    padding: 54px 40px;
+    padding: 54px 0;
+    width: calc(100% - 80px);
   }
 
   .services-footer-list {
@@ -1001,9 +1093,9 @@ html,body {
     width: calc(50% - 32px);
   }
 
-  footer {
-    margin-top: 0;
-  }
+  /*footer {*/
+  /*  margin-top: 0;*/
+  /*}*/
 
   .team-title {
     padding-top: 0;
@@ -1133,7 +1225,7 @@ html,body {
   }
 
   .network .block-info {
-    max-width: 530px;
+    max-width: 550px;
   }
 
   .network .block-title {
@@ -1155,6 +1247,10 @@ html,body {
 
 }
 @media screen and (min-width: 1080px) {
+  footer {
+    margin-top: 65px;
+  }
+
   .introduction {
     margin-top: 64px;
   }
@@ -1244,9 +1340,9 @@ html,body {
     padding: 0;
   }
 
-  footer {
-    margin-top: 60px;
-  }
+  /*footer {*/
+  /*  margin-top: 60px;*/
+  /*}*/
 
   .footer-rocket {
     left: 10px;
@@ -1340,7 +1436,7 @@ html,body {
   }
 
   .services .block-info {
-    max-width: 580px;
+    max-width: 600px;
   }
 
   .network-br {
@@ -1355,9 +1451,26 @@ html,body {
     max-width: 680px;
   }
 }
-
+@media screen and (min-width: 1200px)
+{
+  .footer-rocket {
+    left: 0px;
+    scale: .75;
+  }
+  footer {
+    margin-top: 82px;
+  }
+}
 @media screen and (min-width: 1440px)
 {
+  .services::after {
+    top: 750px;
+    left: -250px;
+  }
+
+  footer {
+    margin-top: 0px;
+  }
   .tagline_line3 img {
     padding: 0;
     position: absolute;
@@ -1440,9 +1553,9 @@ html,body {
     padding-top: 0;
   }
 
-  footer {
-    margin-top: 310px;
-  }
+  /*footer {*/
+  /*  margin-top: 310px;*/
+  /*}*/
 
   .team-title {
     max-width: 811px;
@@ -1458,8 +1571,14 @@ html,body {
 
   .footer-rocket {
     left: 0;
+    width: 100%;
     top: 200px;
     scale: 1;
+    object-fit: cover;
+  }
+
+  .footer-rocket img {
+    object-fit: cover;
   }
 
   .bottom-tagline-container {
@@ -1568,9 +1687,59 @@ html,body {
   .network {
     margin: 0;
   }
+  .tagline-column {
+    display: flex;
+    width: 60%;
+    max-width: 1365px;
+  }
 
+  .space-div {
+    width: 40%;
+  }
+
+  .bottom-tagline-container {
+    display: flex;
+    margin-top: 200px !important;
+    padding: 0;
+    height: 73vh;
+    width: 100vw;
+    background: url("/public/img/footer_rocket.png") no-repeat;
+    background-position: 45%;
+    background-size: 100% 100%;
+  }
+
+  .tagline-column {
+    padding-top: 40px;
+  }
+
+  .bottom-tagline-container img {
+    display: none;
+  }
 }
 
+.tagline-main {
+  display: flex;
+  width: 100%;
+  max-width: 1365px;
+}
+.tagline-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 1920px)
+{
+  .tagline-column {
+    padding-top: 70px;
+  }
+}
+@media screen and (min-width: 2500px) {
+  .bottom-tagline-container {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
 .mob-nav .book-button {
   max-width: 170px;
   align-self: end;
@@ -1716,10 +1885,6 @@ html,body {
   line-height: 22px; /* 157.143% */
 }
 
-.services .block-info {
-  padding-bottom: 36px;
-}
-
 .service-list-header {
   display: flex;
   justify-content: space-between;
@@ -1783,9 +1948,11 @@ html,body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   text-align: center;
   max-width: 100%;
-  background-image: url("/public/img/network_bg.png");
+
+  background-image: radial-gradient(circle,rgba(255,45,160,.141) 2%,rgba(11,9,28,.569) 100%), url("/public/img/network_bg.png");
 }
 
 .network .gradient-container {
@@ -1962,7 +2129,6 @@ html,body {
   z-index: 2;
   position: relative;
   column-gap: 16px;
-  padding-top: 24px;
   padding-left: 18px;
 }
 .button-left {
@@ -1997,6 +2163,12 @@ html,body {
   position: relative;
   z-index: 1;
 }
+
+.footer-rocket {
+  background-size: cover;
+  max-height: fit-content;
+}
+
 .bottom-tagline {
   color: #FFF;
   font-family: ClashGrotesk, serif;
@@ -2021,6 +2193,7 @@ html,body {
 .footer-rocket {
   display: flex;
   z-index: -1;
+  width: 100%;
   justify-content: center;
   position: absolute;
 }
@@ -2079,7 +2252,6 @@ footer .social-row {
   width: 100%;
   height: 2px;
   background: linear-gradient(270deg, #FF2DA0 0%, #7063FF 50.75%, #16BAFF 100%);
-  margin: 14px 0;
 }
 
 .services-footer-list {
@@ -2116,10 +2288,8 @@ footer .social-row {
   align-items: center;
   color: #7E7994;
   font-family: ClashGrotesk, serif;
-  font-size: 12px;
   font-style: normal;
   font-weight: 600;
-  line-height: 16px;
   column-gap: 32px;
   text-transform: uppercase;
 }
@@ -2129,14 +2299,7 @@ footer .social-row {
 .policy-row a:visited {
   color: #7E7994;
 }
-.policy-row:after {
-  content: " ";
-  position: absolute;
-  left: 108px;
-  width: 1px;
-  height: 16px;
-  background: #4C445B;
-}
+
 
 .footer-br {
   display: block;
@@ -2182,9 +2345,9 @@ footer .social-row {
   background: linear-gradient(270deg, #FF2DA0 0%, #16BAFF 100%);
   filter: blur(222px);
 }
-
 .services::after {
   content: " ";
+  z-index: 1;
   position: absolute;
   width: 568px;
   height: 627px;
@@ -2206,3 +2369,4 @@ footer .social-row {
 .stay-curious img {
   max-width: 1365px;
 }
+
