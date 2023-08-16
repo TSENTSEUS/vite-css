@@ -28,17 +28,19 @@
 
 
 @media screen and (min-width: 758px) {
+    .swiper-wrapper {
+        left: 0px !important;
+    }
     .swiper {
         width: 100vw;
     }
 
     .swiper-slide img {
-        width: 214px;
+        width: 216px;
     }
 }
 
 @media screen and (min-width: 1080px) {
-
     .swiper-slide img {
         width: 239px;
     }
@@ -46,7 +48,7 @@
 
 @media screen and (min-width: 1440px) {
     .swiper-slide img {
-        width: 252px;
+        width: 258px;
         height: 300px;
     }
     .swiper-container {
